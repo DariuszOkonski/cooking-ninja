@@ -1,4 +1,5 @@
 import './ThemeSelector.css';
+import modeIcon from '../assets/mode-icon.svg';
 
 import React from 'react';
 import { useTheme } from './../hooks/useTheme';
@@ -10,7 +11,11 @@ export default function ThemeSelector() {
   
     return (
       <div className='theme-selector'>
-          <div className="themebuttons">
+          <div className="mode-toggle">
+              <img src={modeIcon} alt="" />
+          </div>
+
+          <div className="theme-buttons">
               {
                   themeColors.map(color => (
                     <div
