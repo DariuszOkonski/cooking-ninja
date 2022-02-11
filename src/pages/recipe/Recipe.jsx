@@ -5,10 +5,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { projectFirestore } from '../../firebase/config';
 
-export default function Recipe() {
-    // const url = 'http://localhost:3000/recipes/' + id;
-    // const { data: recipe, isPending, error } = useFetch(url);
-    
+export default function Recipe() { 
     const { id } = useParams();
     const { mode } = useTheme();
     const [recipe, setRecipe] = useState(null);
@@ -19,19 +16,28 @@ export default function Recipe() {
       
         setIsPending(true);
 
-        projectFirestore.collection('recipes').doc(id).get()
-            .then((doc) => {
-                if(doc.exists) {
+        const unsub = projectFirestore.collection('recipes').doc(id).onSnapshot((snapShot) => {
+                if(snapShot.exists) {
                     setIsPending(false);
-                    setRecipe(doc.data())
+                    setRecipe(snapShot.data())
                 } else {
                     setIsPending(false);
                     setError('Could not find that recipe')
                 }
+            }, (err) => {
+                console.log(err.message)
             })
+
+            return () => unsub();
       
     }, [id])
     
+    const handleClick = () => {
+        projectFirestore.collection('recipes').doc(id).update({
+            title: 'Something completely different'
+        })
+    }
+
 
     return (
         <div className={`recipe ${mode}`}>
@@ -49,6 +55,7 @@ export default function Recipe() {
                             }
                         </ul>
                         <p className="method">{recipe.method}</p>
+                        <button onClick={handleClick}>Update me</button>
                     </>
                 )
             }
