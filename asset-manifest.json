@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cooking-ninja/static/css/main.fa85e2d4.chunk.css",
+    "main.js": "/cooking-ninja/static/js/main.75212ab4.chunk.js",
+    "main.js.map": "/cooking-ninja/static/js/main.75212ab4.chunk.js.map",
+    "runtime-main.js": "/cooking-ninja/static/js/runtime-main.91b8ba42.js",
+    "runtime-main.js.map": "/cooking-ninja/static/js/runtime-main.91b8ba42.js.map",
+    "static/js/2.358ef9ec.chunk.js": "/cooking-ninja/static/js/2.358ef9ec.chunk.js",
+    "static/js/2.358ef9ec.chunk.js.map": "/cooking-ninja/static/js/2.358ef9ec.chunk.js.map",
+    "index.html": "/cooking-ninja/index.html",
+    "static/css/main.fa85e2d4.chunk.css.map": "/cooking-ninja/static/css/main.fa85e2d4.chunk.css.map",
+    "static/js/2.358ef9ec.chunk.js.LICENSE.txt": "/cooking-ninja/static/js/2.358ef9ec.chunk.js.LICENSE.txt",
+    "static/media/mode-icon.651cf792.svg": "/cooking-ninja/static/media/mode-icon.651cf792.svg",
+    "static/media/trashcan.1129c53a.svg": "/cooking-ninja/static/media/trashcan.1129c53a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91b8ba42.js",
+    "static/js/2.358ef9ec.chunk.js",
+    "static/css/main.fa85e2d4.chunk.css",
+    "static/js/main.75212ab4.chunk.js"
+  ]
+}
